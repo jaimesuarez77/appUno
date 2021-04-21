@@ -1,6 +1,6 @@
 import{StyleSheet, Dimensions} from 'react-native';
 
-const LoginStyles = StyleSheet.create({
+const RegisterStyles = StyleSheet.create({
     container:{
         flex :1,
        
@@ -50,4 +50,4 @@ elevation: 18,
 
 
 });
-export default LoginStyles;
+export default RegisterStyles;
