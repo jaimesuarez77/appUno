@@ -7,7 +7,7 @@ const RegisterStyles = StyleSheet.create({
 
     },
     logoContainer:{
-        backgroundColor: 'orange',
+   
         height: Dimensions.get('screen').height * .4,
         borderBottomLeftRadius : 100,
         justifyContent: 'center',

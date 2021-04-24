@@ -2,9 +2,9 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 const ButtonStyles = StyleSheet.create({
     small:{
-        width: Dimensions.get('screen').width * .5,
-        marginTop: 50,
-        padding: 10,
+        width: Dimensions.get('screen').width * .3,
+        marginTop: 5,
+        padding: 5,
         borderRadius: 50,
         alignItems : 'center'
     },
