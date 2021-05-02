@@ -74,10 +74,10 @@ cardView:{
       
 },
 scrollList:{
-    height : Dimensions.get('screen').height *.92,
+    height : Dimensions.get('screen').height *.94,
 } ,
 containerInitio:{
-    height: Dimensions.get('screen').height * .08,
+    height: Dimensions.get('screen').height * .06,
     flexDirection: 'row',
    
     justifyContent: 'center',

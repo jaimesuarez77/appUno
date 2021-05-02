@@ -1,5 +1,6 @@
 import React from 'react';
 import{View, StatusBar, Image, Text, TextInput,TouchableOpacity, ScrollView} from 'react-native';
+import { TouchableHighlight, FlatList } from 'react-native-gesture-handler';
 import ButtonStyles from '../shared/styles/ButtonStyles';
 import GeneralStyles from '../shared/styles/GeneralStyles';
 import Colors from '../../auth/shared/colors/Colors';
