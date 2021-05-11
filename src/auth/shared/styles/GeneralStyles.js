@@ -91,10 +91,10 @@ viewText:{
 
 },
 viewImage:{
-    width: 100,
-    height: 100,
-    marginLeft:20,
-    
+    width: 120,
+    height: 120,
+    marginLeft:10,
+    borderBottomLeftRadius : 40
 
 } 
 

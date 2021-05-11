@@ -7,9 +7,16 @@ import Colors from '../../auth/shared/colors/Colors';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from "../login/LoginScreens";
+import { render } from 'react-dom';
+
+
 
 const HomeSreen = ({navigation})=>{
-  return <View style = {GeneralStyles.container}>
+  
+
+ 
+ 
+ return <View style = {GeneralStyles.container}>
           <StatusBar backgroundColor = {Colors.primary}></StatusBar>
     
             <View style = {GeneralStyles.containerInitio}>
@@ -24,6 +31,13 @@ const HomeSreen = ({navigation})=>{
                <TouchableOpacity onPress={() => navigation.navigate('Register')} >
                   <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
                   <Text style={GeneralStyles.textButton}>Register</Text>
+                  </View>
+               </TouchableOpacity>
+               </View> 
+               <View>
+               <TouchableOpacity onPress={() =>  navigation.navigate('ListUser')} >
+                  <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
+                  <Text style={GeneralStyles.textButton}>ListUser</Text>
                   </View>
                </TouchableOpacity>
                </View> 
@@ -101,5 +115,6 @@ const HomeSreen = ({navigation})=>{
     
      
   </View>
+  
 }   
 export default HomeSreen;

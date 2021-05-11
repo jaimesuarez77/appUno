@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import LoginSreens from './src/auth/login/LoginScreens';
 import RegisterSreens from './src/auth/register/RegisterScreens';
 import HomeScreen from './src/auth/home/HomeScreen';
+import ListUsersScreen from './src/auth/users/ListUsersScreen'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Colors from './src/auth/shared/colors/Colors';
@@ -26,6 +27,7 @@ const App = ()=>{
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
            <Stack.Screen  name="Home" component={HomeScreen} />
+           <Stack.Screen  name="ListUser" component={ListUsersScreen} options={{headerShown: false}} />
            <Stack.Screen screenOptions={{
           headerStyle:{
             backgroundColor: '#F3671C',

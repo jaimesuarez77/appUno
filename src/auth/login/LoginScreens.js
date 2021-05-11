@@ -32,7 +32,7 @@ const LoginSreens = ()=>{
        console.log(responsJson);
    }
    const getUser = async ()=>{
-      const respons = await fetch('https://reqres.in/api/users/2');
+      const respons = await fetch('https://reqres.in/api/users?page=2');
       const responsJson = await respons.json()
       console.log(responsJson);
    }

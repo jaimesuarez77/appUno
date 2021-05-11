@@ -4,7 +4,7 @@
     "slug": "appUno",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/auth/shared/img/hormiga.jpg",
+    "icon": "./src/auth/shared/img/account.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
