@@ -12,11 +12,7 @@ const LoginSreens = ({navigation})=>{
   
    const [name, setName] = useState('');
    const [job, setJob] = useState('');
- /*   const validateEmail = ()=>{
-      if (user === '') {
-         Alert.alert('Debe llenar todos los campos')
-      }
-   } */
+
 
    const sendUser =  async ()=>{
       const respons = await fetch('https://reqres.in/api/users', {
@@ -33,12 +29,7 @@ const LoginSreens = ({navigation})=>{
        const responsJson = await respons.json();
        console.log(responsJson);
    }
-   const getUser = async ()=>{
-      const respons = await fetch('https://reqres.in/api/users?page=2');
-      const responsJson = await respons.json()
-      console.log(responsJson);
-      navigation.navigate('ListUser');
-   }
+  
 
   return <View style = {GeneralStyles.container}>
          <StatusBar backgroundColor = {Colors.primary}></StatusBar>
