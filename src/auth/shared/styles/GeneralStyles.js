@@ -96,6 +96,10 @@ viewImage:{
     marginLeft:10,
     borderBottomLeftRadius : 40
 
+},
+user:{
+    justifyContent: 'center',
+    alignItems : 'center'
 } 
 
 

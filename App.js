@@ -25,10 +25,8 @@ const Stack = createStackNavigator();
 const App = ()=>{
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-           <Stack.Screen  name="Home" component={HomeScreen} />
-           <Stack.Screen  name="ListUser" component={ListUsersScreen} options={{headerShown: false}} />
-           <Stack.Screen screenOptions={{
+      <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen screenOptions={{
           headerStyle:{
             backgroundColor: '#F3671C',
           },
@@ -36,8 +34,11 @@ const App = ()=>{
           headerTitleStyle: {
             fontWeight: 'bold'
           }
-        }} options={{title:'Home'}} name="Login" component={LoginSreens} />
-           <Stack.Screen options={{title:'Home'}} name="Register" component={RegisterSreens} />
+        }} options={ {headerShown:false}} name="Login" component={LoginSreens} />
+           <Stack.Screen  name="Home" component={HomeScreen} />
+           <Stack.Screen  name="ListUser" component={ListUsersScreen} options={{headerShown: false}} />
+          
+           <Stack.Screen options={{headerShown:false}} name="Register" component={RegisterSreens} />
       </Stack.Navigator>
     </NavigationContainer>
   );}   

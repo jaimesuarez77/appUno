@@ -16,7 +16,8 @@ const ListUsersScreen = () => {
   return <View>
       <FlatList 
       data={users}
-      renderItem={({item})=><CardComponent data={item}></CardComponent>}></FlatList>
+      renderItem={({item})=><CardComponent data={item}></CardComponent>} 
+       keyExtractor={item => item.id} ></FlatList>
   </View>
 }
 

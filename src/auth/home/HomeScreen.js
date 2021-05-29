@@ -11,16 +11,21 @@ import { render } from 'react-dom';
 
 
 
-const HomeSreen = ({navigation})=>{
-  
+const HomeSreen = ({route,navigation})=>{
+   const {name} = route.params;
 
  
  
  return <View style = {GeneralStyles.container}>
           <StatusBar backgroundColor = {Colors.primary}></StatusBar>
-    
+          <View style={GeneralStyles.user}> 
+               <Text style={{fontWeight : "bold", fontSize: 20, color : "#E91E63", marginTop: 30}}>Welcome {name}</Text>
+               </View>
             <View style = {GeneralStyles.containerInitio}>
+              
+            
                <View>
+               
                <TouchableOpacity onPress={() => navigation.navigate('Login')}  >
                   <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
                   <Text style={GeneralStyles.textButton}>Login</Text>
@@ -49,6 +54,7 @@ const HomeSreen = ({navigation})=>{
 
            
            <View style = {GeneralStyles.scrollList} > 
+           
           <ScrollView >
                 <View style={GeneralStyles.cardView} >
                 <Image source={require('../shared/img/frente1.jpg')} style={GeneralStyles.viewImage} ></Image>
