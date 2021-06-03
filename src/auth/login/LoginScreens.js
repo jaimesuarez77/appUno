@@ -11,7 +11,7 @@ import {ListUsersScreen} from '../users/ListUsersScreen.js';
 const LoginSreens = ({navigation})=>{
   
    const [name, setName] = useState('');
-   const [job, setJob] = useState('');
+   const [pass, setPass] = useState('');
 
 
    const sendUser =  async ()=>{
@@ -23,7 +23,7 @@ const LoginSreens = ({navigation})=>{
          },
          body: JSON.stringify({
            name: name,
-           job: job
+           pass: pass
          })
        });
        const responsJson = await respons.json();
@@ -41,9 +41,9 @@ const LoginSreens = ({navigation})=>{
             </View >
             <View style = {GeneralStyles.inputDataContainer}>
        
-            <TextInput placeholder = 'name' style = {GeneralStyles.inputData} onChangeText={(text)=>setName(text)}></TextInput>
+            <TextInput placeholder = 'User Name' style = {GeneralStyles.inputData} onChangeText={(text)=>setName(text)}></TextInput>
             
-            <TextInput placeholder = 'job' /*secureTextEntry ={true}*/  style = {GeneralStyles.inputData} onChangeText={(text)=>setJob(text)} ></TextInput>
+            <TextInput placeholder = 'Password' /*secureTextEntry ={true}*/  style = {GeneralStyles.inputData} onChangeText={(text)=>setPass(text)} ></TextInput>
            <TouchableOpacity  onPress={() => navigation.navigate('Register')}>
             <Text style={ {fontSize : 18}}>Forget User?</Text>
            </TouchableOpacity>

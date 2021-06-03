@@ -12,7 +12,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const RegisterSreens = ({navigation})=>{
 
-   const [id, setId] = useState('');
+   
    const [user, setUser] = useState('');
    const [email, setEmail] = useState('');
    const [pass, setPass] = useState('');
@@ -51,7 +51,7 @@ const RegisterSreens = ({navigation})=>{
         </View>
      </View >
      <View style = {GeneralStyles.inputDataContainer}>
-        <TextInput placeholder = 'Id' style = {GeneralStyles.inputData} keyboardType='numeric' onChangeText={(text)=>setId(text)} ></TextInput>
+       
         <TextInput placeholder = 'User' style = {GeneralStyles.inputData} onChangeText={(text)=>setUser(text)}></TextInput>
         <TextInput placeholder = 'Email' style = {GeneralStyles.inputData} onChangeText={(text)=>setEmail(text)}></TextInput>
         <TextInput placeholder = 'Password' style = {GeneralStyles.inputData} secureTextEntry ={true} onChangeText={(text)=>setPass(text)}></TextInput>

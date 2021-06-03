@@ -8,7 +8,7 @@ const GeneralStyles = StyleSheet.create({
     },
     logoContainer:{
        
-        height: Dimensions.get('screen').height * .4,
+        height: Dimensions.get('screen').height * .3,
         borderBottomLeftRadius : 100,
         justifyContent: 'center',
         alignItems : 'center'
