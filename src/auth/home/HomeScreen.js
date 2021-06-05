@@ -49,7 +49,7 @@ const HomeSreen = ({route,navigation})=>{
 
 
 
-             </View>  
+             </View>   
             
 
            
@@ -100,7 +100,10 @@ const HomeSreen = ({route,navigation})=>{
 
 
              <View>
-               
+                <View style={GeneralStyles.cardView}>
+                <Image source={{uri: 'https://github.com/jaimesuarez77/imagenes/blob/main/frente5.jpg'}} style={GeneralStyles.viewImage} />
+                </View>
+             
                
                 <Text style={GeneralStyles.cardView}>Texto2</Text>
                 <Text style={GeneralStyles.cardView}>Texto3</Text>

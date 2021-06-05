@@ -5,36 +5,39 @@ import GeneralStyles from "../shared/styles/GeneralStyles"
 import RegisterStyles from './RegisterStyles';
 import ButtonStyles from '../shared/styles/ButtonStyles';
 import Colors from '../../auth/shared/colors/Colors';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+//'https://reqres.in/api/users' , secureTextEntry ={true}
 
 
 const RegisterSreens = ({navigation})=>{
 
    
-   const [user, setUser] = useState('');
+   const [nombre, setNombre] = useState('');
    const [email, setEmail] = useState('');
-   const [pass, setPass] = useState('');
+   const [tipoUsuario, setTipoUsuario] = useState('');
+   
    const sendUser =  async ()=>{
-      const respons = await fetch('https://reqres.in/api/users', {
+      const respons = await fetch('https://192.168.0.9:8080/reservas/usuarios', {
          method: 'POST',
          headers: {
            Accept: 'application/json',
            'Content-Type': 'application/json'
          },
          body: JSON.stringify({
-           id:id, 
-           user: user,
-           email:email,
-           pass:pass
+           
+           nombre: nombre,
+           email: email,
+           tipoUsuario:tipoUsuario
          })
        });
        const responsJson = await respons.json();
        console.log(responsJson);
    }
    const getUser = async ()=>{
-      const respons = await fetch('https://reqres.in/api/users?page=2');
+      const respons = await fetch('192.168.0.9:8080/usuarios');
       const responsJson = await respons.json()
       console.log(responsJson);
       navigation.navigate('ListUser');
@@ -52,9 +55,9 @@ const RegisterSreens = ({navigation})=>{
      </View >
      <View style = {GeneralStyles.inputDataContainer}>
        
-        <TextInput placeholder = 'User' style = {GeneralStyles.inputData} onChangeText={(text)=>setUser(text)}></TextInput>
-        <TextInput placeholder = 'Email' style = {GeneralStyles.inputData} onChangeText={(text)=>setEmail(text)}></TextInput>
-        <TextInput placeholder = 'Password' style = {GeneralStyles.inputData} secureTextEntry ={true} onChangeText={(text)=>setPass(text)}></TextInput>
+        <TextInput placeholder = 'Nombre Usuario' style = {GeneralStyles.inputData} onChangeText={(text)=>setNombre(text)}></TextInput>
+        <TextInput placeholder = 'Email@' style = {GeneralStyles.inputData} onChangeText={(text)=>setEmail(text)}></TextInput>
+        <TextInput placeholder = 'Tipo Usuario' style = {GeneralStyles.inputData}  onChangeText={(text)=>setTipoUsuario(text)}></TextInput>
 
         <TouchableOpacity onPress={() => sendUser()} >
                   <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>

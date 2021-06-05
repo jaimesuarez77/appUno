@@ -6,6 +6,7 @@ import HomeScreen from './src/auth/home/HomeScreen';
 import ListUsersScreen from './src/auth/users/ListUsersScreen'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Colors from './src/auth/shared/colors/Colors';
 import{View, StatusBar, Image, Text, TextInput,TouchableOpacity} from 'react-native';
 
@@ -20,12 +21,23 @@ import{View, StatusBar, Image, Text, TextInput,TouchableOpacity} from 'react-nat
 function DetailsScreen({ navigation }){
   return <RegisterSreens></RegisterSreens>
 }  */
+const Drawer = createDrawerNavigator();
 
-const Stack = createStackNavigator();
+
+
+//const Stack = createStackNavigator();
 const App = ()=>{
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+
+      <Drawer.Navigator initialRouteName="Login">
+        <Drawer.Screen name="Login" component={LoginSreens} />
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="ListUser" component={ListUsersScreen} />
+        <Drawer.Screen name="Register" component={RegisterSreens} />
+      </Drawer.Navigator>
+    
+   {/*    <Stack.Navigator >
       <Stack.Screen screenOptions={{
           headerStyle:{
             backgroundColor: '#F3671C',
@@ -39,7 +51,7 @@ const App = ()=>{
            <Stack.Screen  name="ListUser" component={ListUsersScreen} options={{headerShown: false}} />
           
            <Stack.Screen options={{headerShown:false}} name="Register" component={RegisterSreens} />
-      </Stack.Navigator>
+      </Stack.Navigator>  */}
     </NavigationContainer>
   );}   
-export default App;
+export default App; 
