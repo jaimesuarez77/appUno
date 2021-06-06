@@ -10,7 +10,7 @@ const ButtonStyles = StyleSheet.create({
     },
     medium:{    
         width: Dimensions.get('screen').width * .7,
-        marginTop: 50,
+        marginTop: 5,
         padding: 10,
         borderRadius: 50,
         alignItems : 'center'

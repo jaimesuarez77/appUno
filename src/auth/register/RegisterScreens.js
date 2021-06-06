@@ -9,7 +9,7 @@ import Colors from '../../auth/shared/colors/Colors';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-//'https://reqres.in/api/users' , secureTextEntry ={true}
+//'https://reqres.in//api/users?page=2' , secureTextEntry ={true},'https://localHost:8080/api/usuario/nuevo'
 
 
 const RegisterSreens = ({navigation})=>{
@@ -20,7 +20,7 @@ const RegisterSreens = ({navigation})=>{
    const [tipoUsuario, setTipoUsuario] = useState('');
    
    const sendUser =  async ()=>{
-      const respons = await fetch('https://192.168.0.9:8080/reservas/usuarios', {
+      const respons = await fetch('https://reqres.in/api/users', {
          method: 'POST',
          headers: {
            Accept: 'application/json',
@@ -28,20 +28,16 @@ const RegisterSreens = ({navigation})=>{
          },
          body: JSON.stringify({
            
-           nombre: nombre,
+           name: nombre,
            email: email,
            tipoUsuario:tipoUsuario
+           
          })
        });
        const responsJson = await respons.json();
        console.log(responsJson);
    }
-   const getUser = async ()=>{
-      const respons = await fetch('192.168.0.9:8080/usuarios');
-      const responsJson = await respons.json()
-      console.log(responsJson);
-      navigation.navigate('ListUser');
-   }
+  
 
 
 
@@ -64,11 +60,7 @@ const RegisterSreens = ({navigation})=>{
                   <Text style={GeneralStyles.textButton}>Register</Text>
                   </View>
                </TouchableOpacity>
-               <TouchableOpacity onPress={() => getUser()} >
-                  <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
-                  <Text style={GeneralStyles.textButton}>Lista de Usuarios</Text>
-                  </View>
-               </TouchableOpacity>
+               
    
         
      </View>

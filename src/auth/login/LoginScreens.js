@@ -55,7 +55,7 @@ const LoginSreens = ({navigation})=>{
                   </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Register')} >
-                  <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
+                  <View backgroundColor = {Colors.primary} style = {ButtonStyles.medium}>
                   <Text style={GeneralStyles.textButton}>Go Register</Text>
                   </View>
                </TouchableOpacity>

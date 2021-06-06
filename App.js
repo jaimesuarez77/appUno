@@ -9,6 +9,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Colors from './src/auth/shared/colors/Colors';
 import{View, StatusBar, Image, Text, TextInput,TouchableOpacity} from 'react-native';
+import ListReservas from './src/auth/home/ListReservas';
+import RegisterReservas from './src/auth/register/RegisterReservas';
 
 /*  function HomeScreen({ navigation }) {
   return  <HomeScreen></HomeScreen>
@@ -35,6 +37,8 @@ const App = ()=>{
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="ListUser" component={ListUsersScreen} />
         <Drawer.Screen name="Register" component={RegisterSreens} />
+        <Drawer.Screen name="Lista de reservas" component={ListReservas} />
+        <Drawer.Screen name="Reservas" component={RegisterReservas} />
       </Drawer.Navigator>
     
    {/*    <Stack.Navigator >

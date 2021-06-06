@@ -8,7 +8,7 @@ const GeneralStyles = StyleSheet.create({
     },
     logoContainer:{
        
-        height: Dimensions.get('screen').height * .3,
+        height: Dimensions.get('screen').height * .25,
         borderBottomLeftRadius : 100,
         justifyContent: 'center',
         alignItems : 'center'
@@ -36,8 +36,9 @@ const GeneralStyles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 50,
         width: Dimensions.get('screen').width *.85,
-        paddingLeft : 20,
-        marginTop  : 20,
+        height : Dimensions.get('screen').height *.05,
+        paddingLeft : 30,
+        marginTop  : 15,
         shadowColor: "#000",
         shadowOffset: {
 	            width: 0,
@@ -73,6 +74,27 @@ cardView:{
         flexDirection: 'row'
       
 },
+cardViewReservas:{
+
+    height: Dimensions.get('screen').height * .25,
+        borderBottomLeftRadius : 40,
+        borderTopRightRadius:40,
+        //justifyContent: 'center',
+        alignItems : 'center',
+        backgroundColor : 'white',
+        marginTop: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+	            width: 0,
+	            height: 9,
+                },
+        shadowOpacity: 0.48,
+        shadowRadius: 11.95,
+
+        elevation: 18,
+        flexDirection: 'row'
+      
+},
 scrollList:{
     height : Dimensions.get('screen').height *.94,
 } ,
@@ -84,11 +106,14 @@ containerInitio:{
     alignItems : 'center'
 } ,
 viewText:{
-    marginLeft:20,
-    fontSize : 20,
+    marginLeft:10,
+    fontSize : 15,
     justifyContent: 'center',
     alignItems : 'center'
 
+},
+viewBotton:{
+    flexDirection: 'row'
 },
 viewImage:{
     width: 120,

@@ -3,12 +3,12 @@ import {View, Text,Image, TouchableOpacity, Alert, Button} from 'react-native';
 import GeneralStyles from '../shared/styles/GeneralStyles';
 import ButtonStyles from '../shared/styles/ButtonStyles';
 import Colors from '../../auth/shared/colors/Colors';
-
+{/* <Image source={{uri: data.avatar}} style={GeneralStyles.viewImage} /> */}
 const CardComponent =(props)=>{
-    const {data}= props;
+    const{data}= props;
     console.log(props);
 
-    const eliminarUsuario= async () => {
+   /*  const eliminarUsuario= async () => {
         try{
           const response = await fetch('', {
             method: 'POST',
@@ -27,17 +27,20 @@ const CardComponent =(props)=>{
           console.log(error);
         } 
   
-      }
+      } */
   
     return <View style = {GeneralStyles.cardView}>
+          <View>
+          <Image source={{uri: data.avatar}} style={GeneralStyles.viewImage} />
+          </View>
+         
          <View>
-         <Image source={{uri: data.avatar}} style={GeneralStyles.viewImage} />
-         </View>
-         <View>
+
             <Text style= {GeneralStyles.viewText}>{data.id}</Text>
+            <Text style= {GeneralStyles.viewText}>{data.email}</Text>
             <Text style= {GeneralStyles.viewText}>{data.first_name}</Text>
             <Text style= {GeneralStyles.viewText}>{data.last_name}</Text>
-            <Text style= {GeneralStyles.viewText}>{data.email}</Text>
+            
             <TouchableOpacity onPress={() => Alert.alert(`Desea Eliminar Usuario ${data.first_name}`)} >
                   <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
                   <Text style={GeneralStyles.textButton}>Eliminar Usuario</Text>
