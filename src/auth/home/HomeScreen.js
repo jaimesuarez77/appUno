@@ -19,7 +19,7 @@ const HomeSreen = ({route,navigation})=>{
  return <View style = {GeneralStyles.container}>
           <StatusBar backgroundColor = {Colors.primary}></StatusBar>
           <View style={GeneralStyles.user}> 
-               <Text style={{fontWeight : "bold", fontSize: 20, color : "#E91E63", marginTop: 30}}>Welcome {name}</Text>
+               <Text style={{fontWeight : "bold", fontSize: 20, color : "#E91E63", marginTop: 30}}>Bienvenido {name}</Text>
                </View>
             <View style = {GeneralStyles.containerInitio}>
               
@@ -80,19 +80,19 @@ const HomeSreen = ({route,navigation})=>{
                 </View>
 
                 <View style={GeneralStyles.cardView} >
-                <Image source={require('../shared/img/recreativa.jpg')} style={GeneralStyles.viewImage} ></Image>
+                <Image source={{uri:'https://github.com/jaimesuarez77/imagenes/blob/main/frente4.jpg ,'}} style={GeneralStyles.viewImage} ></Image>
                 <Text  style= {GeneralStyles.viewText}>Recreativa</Text>
                 </View>
 
               
                 <View style={GeneralStyles.cardView} >
-                <Image source={require('../shared/img/frente4.jpg')} style={GeneralStyles.viewImage} ></Image>
+                <Image style={GeneralStyles.viewImage} source={{uri:'https://github.com/jaimesuarez77/imagenes/blob/main/frente1.jpg ,'}}    ></Image>
                 <Text  style= {GeneralStyles.viewText}>Tranquila</Text>
                 </View>
 
             
                 <View style={GeneralStyles.cardView} >
-                <Image source={require('../shared/img/frente5.jpg')} style={GeneralStyles.viewImage} ></Image>
+                <Image source={{uri: 'https://github.com/jaimesuarez77/imagenes/blob/main/frente3.jpg'}} style={GeneralStyles.viewImage} ></Image>
                 <Text  style= {GeneralStyles.viewText}>Familiar</Text>
                 </View>
 
@@ -101,7 +101,7 @@ const HomeSreen = ({route,navigation})=>{
 
              <View>
                 <View style={GeneralStyles.cardView}>
-                <Image source={{uri: 'https://github.com/jaimesuarez77/imagenes/blob/main/frente5.jpg'}} style={GeneralStyles.viewImage} />
+                <Image source={{uri: 'https://github.com/jaimesuarez77/imagenes/blob/main/frente5.jpg ,'}} style={GeneralStyles.viewImage} />
                 </View>
              
                
