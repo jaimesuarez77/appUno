@@ -60,6 +60,11 @@ const HomeSreen = ({route,navigation})=>{
                 <Image source={require('../shared/img/frente1.jpg')} style={GeneralStyles.viewImage} ></Image>
                 <View>
                 <Text style= {GeneralStyles.viewText}>Espaciosa</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Reservas',{name})} >
+                  <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
+                  <Text style={GeneralStyles.textButton}>Reservar</Text>
+                  </View>
+               </TouchableOpacity>
                 </View>
                 
                 </View>

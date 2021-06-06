@@ -38,7 +38,7 @@ const App = ()=>{
         <Drawer.Screen name="ListUser" component={ListUsersScreen} />
         <Drawer.Screen name="Register" component={RegisterSreens} />
         <Drawer.Screen name="Lista de reservas" component={ListReservas} />
-        <Drawer.Screen name="Reservas" component={RegisterReservas} />
+        <Drawer.Screen name="Reservas" component={RegisterReservas} options={ {headerShown:false}} />
       </Drawer.Navigator>
     
    {/*    <Stack.Navigator >
