@@ -2,7 +2,7 @@ import React from 'react';
 import  {useState} from 'react';
 import{View, StatusBar, Image, Text, TextInput,TouchableOpacity} from 'react-native';
 import GeneralStyles from "../shared/styles/GeneralStyles"
-import RegisterStyles from './RegisterStyles';
+
 import ButtonStyles from '../shared/styles/ButtonStyles';
 import Colors from '../../auth/shared/colors/Colors';
 

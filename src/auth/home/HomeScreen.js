@@ -56,29 +56,40 @@ const HomeSreen = ({route,navigation})=>{
            <View style = {GeneralStyles.scrollList} > 
            
           <ScrollView >
-                <View style={GeneralStyles.cardView} >
+                 <TouchableOpacity onPress={() => navigation.navigate('Reservas',{name})} >
+                 <View style={GeneralStyles.cardView} >
                 <Image source={require('../shared/img/frente1.jpg')} style={GeneralStyles.viewImage} ></Image>
-                <View>
+                 <View>
                 <Text style= {GeneralStyles.viewText}>Espaciosa</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Reservas',{name})} >
-                  <View backgroundColor = {Colors.primary} style = {ButtonStyles.small}>
-                  <Text style={GeneralStyles.textButton}>Reservar</Text>
-                  </View>
-               </TouchableOpacity>
+                 </View> 
                 </View>
-                
-                </View>
-                <View style={GeneralStyles.cardView} >
+                 </TouchableOpacity>
+                 <TouchableOpacity onPress={() => navigation.navigate('Reservas',{name})} >
+                 <View style={GeneralStyles.cardView} >
                 <Image source={require('../shared/img/frente2.jpg')} style={GeneralStyles.viewImage} ></Image>
-                <Text style= {GeneralStyles.viewText} >Elegante</Text>
-               
+                 <View>
+                <Text style= {GeneralStyles.viewText}>Espaciosa</Text>
+                 </View> 
                 </View>
-                <View style={GeneralStyles.cardView} >
+                 </TouchableOpacity>
+                 <TouchableOpacity onPress={() => navigation.navigate('Reservas',{name})} >
+                 <View style={GeneralStyles.cardView} >
                 <Image source={require('../shared/img/frente3.jpg')} style={GeneralStyles.viewImage} ></Image>
-                <Text  style= {GeneralStyles.viewText}>Tranquila</Text>
+                 <View>
+                <Text style= {GeneralStyles.viewText}>Espaciosa</Text>
+                 </View> 
                 </View>
+                 </TouchableOpacity>
+                 <TouchableOpacity onPress={() => navigation.navigate('Reservas',{name})} >
+                 <View style={GeneralStyles.cardView} >
+                <Image source={require('../shared/img/palacio.jpg')} style={GeneralStyles.viewImage} ></Image>
+                 <View>
+                <Text style= {GeneralStyles.viewText}>Espaciosa</Text>
+                 </View> 
+                </View>
+                 </TouchableOpacity>
 
-             
+
                 <View style={GeneralStyles.cardView} >
                 <Image source={require('../shared/img/palacio.jpg')} style={GeneralStyles.viewImage} ></Image>
                 <Text  style= {GeneralStyles.viewText}>Magestuosa</Text>

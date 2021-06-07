@@ -11,7 +11,7 @@ import Colors from './src/auth/shared/colors/Colors';
 import{View, StatusBar, Image, Text, TextInput,TouchableOpacity} from 'react-native';
 import ListReservas from './src/auth/home/ListReservas';
 import RegisterReservas from './src/auth/register/RegisterReservas';
-
+import EditarReserva from './src/auth/home/EditarReserva';
 /*  function HomeScreen({ navigation }) {
   return  <HomeScreen></HomeScreen>
   
@@ -39,6 +39,7 @@ const App = ()=>{
         <Drawer.Screen name="Register" component={RegisterSreens} />
         <Drawer.Screen name="Lista de reservas" component={ListReservas} />
         <Drawer.Screen name="Reservas" component={RegisterReservas} options={ {headerShown:false}} />
+        <Drawer.Screen name="Editar" component={EditarReserva} options={ {headerShown:false}} />
       </Drawer.Navigator>
     
    {/*    <Stack.Navigator >
