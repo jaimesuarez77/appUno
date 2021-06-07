@@ -62,12 +62,12 @@ const RegisterReservas = ({route,navigation})=>{
      <ScrollView >  
         <TextInput placeholder = 'Nombre Usuario' style = {GeneralStyles.inputData} onChangeText={(text)=>setNombre(text)}>{name}</TextInput>
         <TextInput placeholder = 'Apellidos' style = {GeneralStyles.inputData} onChangeText={(text)=>setApellido(text)}></TextInput>
-        <TextInput placeholder = 'Teléfono' style = {GeneralStyles.inputData} keyboardType={Number} onChangeText={(text)=>setTelefonoCliente(text)}></TextInput>
-        <TextInput placeholder = 'Fecha de Inicio' style = {GeneralStyles.inputData} keyboardType={Number} onChangeText={(text)=>setFechaInicio(text)}></TextInput>
-        <TextInput placeholder = 'Fecha Final' style = {GeneralStyles.inputData} keyboardType={Number} onChangeText={(text)=>setFechaFinal(text)}></TextInput>
-        <TextInput placeholder = 'Número de personas' style = {GeneralStyles.inputData} keyboardType={Number} onChangeText={(text)=>setNumerodePersonas(text)}></TextInput>
+        <TextInput placeholder = 'Teléfono' style = {GeneralStyles.inputData} keyboardType="numeric" onChangeText={(text)=>setTelefonoCliente(text)}></TextInput>
+        <TextInput placeholder = 'Fecha de Inicio' style = {GeneralStyles.inputData} keyboardType="numeric" onChangeText={(text)=>setFechaInicio(text)}></TextInput>
+        <TextInput placeholder = 'Fecha Final' style = {GeneralStyles.inputData} keyboardType="numeric" onChangeText={(text)=>setFechaFinal(text)}></TextInput>
+        <TextInput placeholder = 'Número de personas' style = {GeneralStyles.inputData} keyboardType="numeric" onChangeText={(text)=>setNumerodePersonas(text)}></TextInput>
         <TextInput placeholder = 'Tipo de Paquete' style = {GeneralStyles.inputData}  onChangeText={(text)=>setTipoPaque(text)}></TextInput>
-        <TextInput placeholder = 'Imagen' style = {GeneralStyles.inputData} >{source}</TextInput>
+        
         
     </ScrollView>  
     <TouchableOpacity onPress={() => sendUser()} >
