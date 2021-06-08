@@ -4,6 +4,7 @@ import{View, StatusBar, Image, Text, TextInput,TouchableOpacity,ScrollView, Aler
 import GeneralStyles from "../shared/styles/GeneralStyles"
 import ButtonStyles from '../shared/styles/ButtonStyles';
 import Colors from '../../auth/shared/colors/Colors';
+import ListReservas from '../home/ListReservas';
 
 const RegisterReservas = ({route,navigation})=>{
   const {name} = route.params;
@@ -37,6 +38,8 @@ const RegisterReservas = ({route,navigation})=>{
        const responsJson = await respons.json();
        console.log(responsJson);
        Alert.alert(responsJson.mensaje)
+      const editarR = ({navigation})=>{navigation.navigate('Editar')
+   }    
    }
   
 

@@ -19,7 +19,7 @@ const HomeSreen = ({route,navigation})=>{
  return <View style = {GeneralStyles.container}>
           <StatusBar backgroundColor = {Colors.primary}></StatusBar>
           <View style={GeneralStyles.user}> 
-               <Text style={{fontWeight : "bold", fontSize: 20, color : "#E91E63", marginTop: 30}}>Bienvenido {name}</Text>
+               <Text  style={{fontWeight : "bold", fontSize: 20,color:"black", marginTop: 30}}>Bienvenido {name}</Text>
                </View>
             <View style = {GeneralStyles.containerInitio}>
               

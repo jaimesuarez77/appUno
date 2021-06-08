@@ -16,8 +16,10 @@ const getReservas = async () =>{
         const responseJson = await response.json();
         setReservas(responseJson.mensaje);
  }
- const reservaInfo = ()=>{
-    navigation.navigate('Editar')
+ const reservaInfo = (user)=>{
+    navigation.navigate('Editar',{
+      user:user
+    })
 
  }
  
