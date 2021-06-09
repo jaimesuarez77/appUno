@@ -96,13 +96,13 @@ const HomeSreen = ({route,navigation})=>{
                 </View>
 
                 <View style={GeneralStyles.cardView} >
-                <Image source={{uri:'https://github.com/jaimesuarez77/imagenes/blob/main/frente4.jpg ,'}} style={GeneralStyles.viewImage} ></Image>
+                <Image source={{uri:'https://placeimg.com/640/480/any '}} style={GeneralStyles.viewImage} ></Image>
                 <Text  style= {GeneralStyles.viewText}>Recreativa</Text>
                 </View>
 
               
                 <View style={GeneralStyles.cardView} >
-                <Image style={GeneralStyles.viewImage} source={{uri:'https://github.com/jaimesuarez77/imagenes/blob/main/frente1.jpg ,'}}    ></Image>
+                <Image style={GeneralStyles.viewImage} source={{uri:'https://placeimg.com/640/480/arch '}}    ></Image>
                 <Text  style= {GeneralStyles.viewText}>Tranquila</Text>
                 </View>
 

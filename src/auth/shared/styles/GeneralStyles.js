@@ -49,6 +49,24 @@ const GeneralStyles = StyleSheet.create({
 
         elevation: 18,
     },
+    inputDataEditar:{
+       
+        backgroundColor: 'white',
+        borderRadius: 50,
+        width: Dimensions.get('screen').width *.85,
+        height : Dimensions.get('screen').height *.05,
+        paddingLeft : 30,
+        marginTop  : 5,
+        shadowColor: "#000",
+        shadowOffset: {
+	            width: 0,
+	            height: 9,
+                },
+        shadowOpacity: 0.48,
+        shadowRadius: 11.95,
+
+        elevation: 18,
+    },
 textButton:{
     color:'white',
     fontWeight: '300'
